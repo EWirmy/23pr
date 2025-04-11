@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Банк заданий</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        ul { list-style: disc; margin-left: 20px; }
+        a { text-decoration: none; color: #007BFF; margin-top: 20px; display: inline-block; }
+    </style>
+</head>
+<body>
+    <h1>Банк заданий</h1>
+    <ul>
+        {% for task in tasks %}
+            <li>{{ task }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/">← Назад на главную</a>
+</body>
+</html>

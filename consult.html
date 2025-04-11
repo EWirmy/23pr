@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Консультация</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        textarea { width: 100%; max-width: 600px; }
+        button { margin-top: 10px; padding: 8px 16px; }
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            background: #f9f9f9;
+            max-width: 600px;
+        }
+        a { display: inline-block; margin-top: 20px; text-decoration: none; color: #007BFF; }
+    </style>
+</head>
+<body>
+    <h1>Консультация</h1>
+    <form method="post">
+        <textarea name="question" rows="5" placeholder="Введите ваш вопрос" required>{% if question %}{{ question }}{% endif %}</textarea>
+        <br>
+        <button type="submit">Отправить</button>
+    </form>
+
+    {% if answer %}
+    <div class="result">
+        <h2>Ответ:</h2>
+        <p>{{ answer }}</p>
+    </div>
+    {% endif %}
+
+    <a href="/">← Назад на главную</a>
+</body>
+</html>
